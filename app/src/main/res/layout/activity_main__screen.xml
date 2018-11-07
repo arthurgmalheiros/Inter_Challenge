@@ -19,7 +19,7 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="403dp"
+        android:layout_width="390dp"
         android:layout_height="0dp"
         android:contentDescription="@string/tela_inicial"
         app:layout_constraintBottom_toBottomOf="parent"

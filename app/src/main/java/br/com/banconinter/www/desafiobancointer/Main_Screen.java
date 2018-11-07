@@ -17,8 +17,7 @@ public class Main_Screen extends AppCompatActivity {
     final Button button = (Button) findViewById(R.id.button3);
          button.setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
-            Intent myIntent = new Intent(this, .class);
-            startActivity(myIntent);
+            startActivity(new Intent(Main_Screen.this, Second_Screen.class));
         }
     });
         }
