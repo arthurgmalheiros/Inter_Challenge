@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">DesafioBancoInter</string>
+<<<<<<< HEAD
     <string name="title_activity_scanner_">Scanner_Activity</string>
+=======
+    <string name="tela_inicial">tela_inicial</string>
+>>>>>>> b1d50d88c059fc7868b23e58f1953c2d64adc55e
 </resources>
