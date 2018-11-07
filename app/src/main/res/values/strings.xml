@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DesafioBancoInter</string>
+    <string name="title_activity_scanner_">Scanner_Activity</string>
 </resources>
