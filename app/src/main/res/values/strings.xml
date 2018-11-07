@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DesafioBancoInter</string>
+    <string name="tela_inicial">tela_inicial</string>
 </resources>
