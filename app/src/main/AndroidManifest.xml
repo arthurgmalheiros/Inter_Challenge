@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Second_Screen"></activity>
+        <activity android:name=".Second_Screen" />
+        <activity android:name=".Info_Imovel_1"></activity>
     </application>
 
 </manifest>

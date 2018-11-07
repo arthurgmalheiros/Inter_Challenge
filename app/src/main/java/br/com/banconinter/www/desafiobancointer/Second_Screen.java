@@ -1,6 +1,7 @@
 package br.com.banconinter.www.desafiobancointer;
 
 import android.content.Intent;
+import android.icu.text.IDNA;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -37,6 +38,9 @@ public class Second_Screen extends AppCompatActivity {
     }
 
     private void alert(String msg){
-        Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
+        Info_Imovel_1 imv = new Info_Imovel_1();
+        startActivity(new Intent(Second_Screen.this, imv.getClass()));
+        imv.Info(msg);
+
     }
 }
