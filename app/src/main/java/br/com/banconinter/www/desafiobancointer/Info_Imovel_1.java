@@ -14,6 +14,6 @@ public class Info_Imovel_1 extends AppCompatActivity {
     }
     public void Info(String msg)
     {
-        Log.d("CREATION", "Chegou : " + msg + "\n ");
+
     }
 }

@@ -6,4 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Info_Imovel_1">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="308dp"
+        android:layout_height="408dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text='Log.d("CREATION", "Chegou : " + parts[0] + "\n ");         Info_Imovel_1 imv = new Info_Imovel_1();         startActivity(new Intent(Second_Screen.this, imv.getClass()));         imv.Info(msg);'
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
