@@ -13,8 +13,6 @@ public class Main_Screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__screen);
-<<<<<<< HEAD
-=======
 
     final Button button = (Button) findViewById(R.id.button3);
          button.setOnClickListener(new View.OnClickListener() {
@@ -22,7 +20,6 @@ public class Main_Screen extends AppCompatActivity {
             startActivity(new Intent(Main_Screen.this, Second_Screen.class));
         }
     });
->>>>>>> 35f645c8ed01223ee1e58a776d39d27e401ab656
-        }
     }
+}
 
