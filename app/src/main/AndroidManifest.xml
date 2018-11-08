@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Second_Screen" />
-        <activity android:name=".Info_Imovel_1"></activity>
+        <activity android:name=".Info_Imovel_1" />
+        <activity android:name=".Sim_Financiamento"></activity>
     </application>
 
 </manifest>
