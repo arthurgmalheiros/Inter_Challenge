@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Main_Screen"
-            android:theme="@style/AppTheme">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <data android:host="returnapp" android:scheme="myapp" android:pathPattern=".*"></data>
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Second_Screen" android:screenOrientation="portrait"/>
-        <activity android:name=".Info_Imovel_1" />
+        <activity android:name=".Info_Imovel_1" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity android:name=".Sim_Financiamento"></activity>
         <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="sensorPortrait"

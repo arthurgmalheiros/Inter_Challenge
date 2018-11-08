@@ -1,5 +1,6 @@
 package br.com.banconinter.www.desafiobancointer;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ public class Main_Screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__screen);
+
 
     final Button button = (Button) findViewById(R.id.button3);
          button.setOnClickListener(new View.OnClickListener() {
