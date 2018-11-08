@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Second_Screen">
+    tools:context=".Second_Screen"
+    android:screenOrientation="fullSensor"
+    android:stateNotNeeded="true"
+    android:theme="@style/zxing_CaptureTheme"
+    android:windowSoftInputMode="stateAlwaysHidden">
 
 </android.support.constraint.ConstraintLayout>

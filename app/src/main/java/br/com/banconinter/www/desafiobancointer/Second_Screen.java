@@ -23,6 +23,9 @@ public class Second_Screen extends AppCompatActivity {
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
         integrator.setPrompt("Camera Scan");
         integrator.setCameraId(0);
+        integrator.setBeepEnabled(false);
+        integrator.setBarcodeImageEnabled(false);
+        integrator.setOrientationLocked(true);
         integrator.initiateScan();
 
     }
