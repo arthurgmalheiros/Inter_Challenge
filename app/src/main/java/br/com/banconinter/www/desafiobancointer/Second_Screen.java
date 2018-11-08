@@ -41,7 +41,7 @@ public class Second_Screen extends AppCompatActivity {
     }
 
     private void alert(String msg){
-        String[] parts = msg.split("-");
+        String[] parts = msg.split("λ");
         Log.d("STRING","Gotcha: " + parts[0]);
         if (parts[0].equals("8528"))
         {

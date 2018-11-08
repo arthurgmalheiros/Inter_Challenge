@@ -12,8 +12,6 @@ public class Info_Imovel_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info__imovel_1);
     }
-    public void Info(String msg)
-    {
-
+    public void Info(String msg) {
     }
 }
