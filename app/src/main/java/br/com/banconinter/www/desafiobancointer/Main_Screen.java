@@ -8,14 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Main_Screen extends Activity {
+public class Main_Screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__screen);
 
-        getActionBar().hide();
 
     final Button button = (Button) findViewById(R.id.button3);
          button.setOnClickListener(new View.OnClickListener() {

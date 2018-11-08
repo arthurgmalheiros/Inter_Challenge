@@ -4,6 +4,7 @@
     <string name="emprestimoBtn">emprestimoBtn</string>
     <string name="texto" id="texto"></string>
     <string name="NomeImovel">Financiando: </string>
+    <string name="financie">FINANCIE!</string>
     <integer name="JurosMax">666</integer>
     <integer name="ParcelasMax">666</integer>
     <integer name="ParcelasJuros">666</integer>
