@@ -23,6 +23,9 @@ public class Second_Screen extends AppCompatActivity {
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
         integrator.setPrompt("Camera Scan");
         integrator.setCameraId(0);
+        integrator.setBeepEnabled(false);
+        integrator.setBarcodeImageEnabled(false);
+        integrator.setOrientationLocked(true);
         integrator.initiateScan();
 
     }
@@ -42,7 +45,7 @@ public class Second_Screen extends AppCompatActivity {
 
     private void alert(String msg){
         String[] parts = msg.split("λ");
-        Log.d("STRING","Gotcha: " + parts[0]);
+        Log.d("STRING","Gotcha: " + parts);
         if (parts[0].equals("8528"))
         {
             finish();
@@ -50,6 +53,15 @@ public class Second_Screen extends AppCompatActivity {
             Intent itn = new Intent(Second_Screen.this, imv.getClass());
             Bundle b = new Bundle();
             b.putString("cep", parts[1]);
+            b.putString("valor", parts[2]);
+            b.putString("condominio", parts[3]);
+            b.putString("iptu", parts[4]);
+            b.putString("area", parts[5]);
+            b.putString("quartos", parts[6]);
+            b.putString("banheiros", parts[7]);
+            b.putString("garagem", parts[8]);
+            b.putString("descricao", parts[9]);
+            b.putString("nome", parts[10]);
             itn.putExtras(b);
             startActivity(itn);
             imv.Info(parts);

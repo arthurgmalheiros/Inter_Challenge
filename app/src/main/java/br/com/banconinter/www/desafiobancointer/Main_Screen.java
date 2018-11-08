@@ -23,6 +23,7 @@ public class Main_Screen extends Activity {
             startActivity(new Intent(Main_Screen.this, Second_Screen.class));
         }
     });
+        }
     }
-}
+
 
