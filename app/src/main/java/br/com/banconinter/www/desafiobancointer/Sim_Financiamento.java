@@ -38,9 +38,9 @@ public class Sim_Financiamento extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                final double ueu = ((valor.intValue() - skmax.getProgress()) / 1 +skparc.getProgress())* 1.0075;
+                final double uau = ((valor.intValue() - skmax.getProgress()) /skparc.getProgress()) * 1.0075;;
                 tp.setText(Integer.toString(skparc.getProgress()));
-                pf.setText("R$" + format.format(ueu));
+                pf.setText("R$" + format.format(uau));
             }
 
             @Override
@@ -58,9 +58,9 @@ public class Sim_Financiamento extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 jk.setText(skmax.getProgress() + "/" + valor.toString());
-                final double ueu =((valor - skmax.getProgress()) +(skparc.getProgress())* 1.0075);
+                final double uau =((valor.intValue() - skmax.getProgress()) /skparc.getProgress()) * 1.0075;;
 
-                pf.setText("R$" + format.format(ueu) );
+                pf.setText("R$" + format.format(uau) );
             }
 
             @Override
