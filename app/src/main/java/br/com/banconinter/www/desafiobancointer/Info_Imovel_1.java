@@ -14,14 +14,16 @@ public class Info_Imovel_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info__imovel_1);
 
+        getSupportActionBar().show();
+
         Intent i = getIntent();
         final String key = (String) i.getSerializableExtra("cep"); // getSerializableExtra pega as infomações de acordo com o nome
 
         TextView txt = (TextView)findViewById(R.id.TextoMain);
-        txt.setText(key);
+        txt.setText("CEP:" + key);
     }
     public void Info(String[] msg)
     {
-        
+
     }
 }
