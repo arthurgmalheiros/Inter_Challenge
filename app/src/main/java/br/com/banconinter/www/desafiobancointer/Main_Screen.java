@@ -20,6 +20,10 @@ public class Main_Screen extends AppCompatActivity {
             startActivity(new Intent(Main_Screen.this, Second_Screen.class));
         }
     });
+<<<<<<< HEAD
         }
+=======
+>>>>>>> cd1b18379811b9d7485bbdb112a530650a328a9f
     }
+}
 
