@@ -53,7 +53,7 @@ public class Second_Screen extends AppCompatActivity {
             Intent itn = new Intent(Second_Screen.this, imv.getClass());
             Bundle b = new Bundle();
             b.putString("cep", parts[1]);
-            b.putString("valor", parts[2]);
+            b.putInt("valor", Integer.parseInt(parts[2]));
             b.putString("condominio", parts[3]);
             b.putString("iptu", parts[4]);
             b.putString("area", parts[5]);

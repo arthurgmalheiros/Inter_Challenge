@@ -15,7 +15,7 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <data android:host="returnapp" android:scheme="myapp" android:pathPattern=".*"></data>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,6 +28,8 @@
             android:theme="@style/zxing_CaptureTheme"
             android:windowSoftInputMode="stateAlwaysHidden"
             tools:replace="android:screenOrientation" />
+
     </application>
+
 
 </manifest>

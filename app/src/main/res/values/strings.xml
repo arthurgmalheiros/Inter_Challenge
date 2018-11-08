@@ -5,8 +5,8 @@
     <string name="texto" id="texto"></string>
     <string name="NomeImovel">Financiando: </string>
     <integer name="JurosMax">666</integer>
-    <integer name="ParcelasMax">666</integer>
-    <integer name="ParcelasJuros">666</integer>
+    <integer name="ParcelasMax">360</integer>
+    <integer name="Credito">666</integer>
     <integer name="DescPorInv">666</integer>
     <integer name="PrecoParcMax">666</integer>
     <integer name="PrecoEntMax">666</integer>
