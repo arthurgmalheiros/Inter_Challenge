@@ -17,11 +17,8 @@ import android.widget.TextView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 
-import com.bumptech.glide.Glide;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
-import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ImageListener;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import java.util.ArrayList;
@@ -120,12 +117,7 @@ public class Info_Imovel_1 extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    private void loadImageByInternetUrl(ImageView imageView1,String internetUrl) {
-        Glide
-                .with(this)
-                .load(internetUrl)
-                .into(imageView1);
-    }
+
     public void Info(String[] msg)
     {
 

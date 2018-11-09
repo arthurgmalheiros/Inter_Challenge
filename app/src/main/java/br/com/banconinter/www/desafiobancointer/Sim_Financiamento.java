@@ -29,7 +29,8 @@ public class Sim_Financiamento extends AppCompatActivity {
         final String nome = (String) i.getSerializableExtra("nome");
         final Integer valor = (Integer)i.getSerializableExtra("valor");
 
-
+        getSupportActionBar().setTitle("a"); // for set actionbar title
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // for add back arrow in action bar
 
         final SeekBar skparc = (SeekBar) findViewById(R.id.sk_Parcelas);
         final Double minCred = valor * 0.3;
@@ -111,6 +112,15 @@ public class Sim_Financiamento extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem arrow) {
+        // TODO Auto-generated method stub
+        int num = arrow.getItemId();
+        if (num == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(arrow);
     }
 
 }
