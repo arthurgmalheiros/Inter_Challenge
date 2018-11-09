@@ -7,6 +7,7 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
+import java.util.Objects;
+
 public class Sim_Financiamento extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -23,13 +26,18 @@ public class Sim_Financiamento extends AppCompatActivity {
         setContentView(R.layout.activity_sim__financiamento);
         final Intent i = getIntent();
 
+        final String nome = (String) i.getSerializableExtra("nome");
         final Integer valor = (Integer)i.getSerializableExtra("valor");
+
+
 
         final SeekBar skparc = (SeekBar) findViewById(R.id.sk_Parcelas);
         final Double minCred = valor * 0.3;
         Double maxCred = valor *0.7;
         final SeekBar skmax = (SeekBar) findViewById(R.id.sk_Cred);
         skmax.setMax(maxCred.intValue());
+
+
 
         final TextView jk = (TextView)findViewById(R.id.txt_Cred);
         final Button pf = (Button)findViewById(R.id.txt_ParcFinal);
@@ -103,8 +111,6 @@ public class Sim_Financiamento extends AppCompatActivity {
             }
         });
 
-
-
-
     }
+
 }
