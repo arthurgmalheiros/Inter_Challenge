@@ -29,8 +29,8 @@ public class Sim_Financiamento extends AppCompatActivity {
         final String nome = (String) i.getSerializableExtra("nome");
         final Integer valor = (Integer)i.getSerializableExtra("valor");
 
-        getSupportActionBar().setTitle("a"); // for set actionbar title
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // for add back arrow in action bar
+        getSupportActionBar().setTitle(nome); // for set actionbar title
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//.setDisplayHomeAsUpEnabled(true); // for add back arrow in action bar
 
         final SeekBar skparc = (SeekBar) findViewById(R.id.sk_Parcelas);
         final Double minCred = valor * 0.3;
@@ -43,10 +43,10 @@ public class Sim_Financiamento extends AppCompatActivity {
         final TextView jk = (TextView)findViewById(R.id.txt_Cred);
         final Button pf = (Button)findViewById(R.id.txt_ParcFinal);
         final TextView tp = (TextView)findViewById(R.id.txt_Parc);
-        jk.setText("R$"+ skmax.getProgress() + "/R$ " +  valor.toString());
+        jk.setText("R$ " + skmax.getProgress() + "/R$ " +  valor.toString());
         final double ueu = ((valor.intValue() - skmax.getProgress()) /skparc.getProgress()) * 1.0075;
         if (skmax.getProgress() <= minCred)
-            skmax.setProgress(minCred.intValue()); jk.setText(skmax.getProgress() + "/" + valor.toString());
+            skmax.setProgress(minCred.intValue()); jk.setText("R$ " + skmax.getProgress() + "/R$ " +  valor.toString());
         final DecimalFormat format = new DecimalFormat("##.00");
         pf.setText("R$" + format.format(ueu) );
         skparc.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -96,7 +96,7 @@ public class Sim_Financiamento extends AppCompatActivity {
                 //if (progress <= minCred)
                 //    skmax.setProgress(minCred.intValue());
 
-                jk.setText("R$"+ skmax.getProgress() + "/R$ " +  valor.toString());
+                jk.setText("R$ "+ skmax.getProgress() + "/R$ " +  valor.toString());
                 final double uau =((valor.intValue() - skmax.getProgress()) /skparc.getProgress()) * 1.0075;;
 
 
