@@ -18,6 +18,8 @@ import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 
 import com.bumptech.glide.Glide;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 import android.support.v4.view.ViewPager;
@@ -81,10 +83,7 @@ public class Info_Imovel_1 extends AppCompatActivity {
         String seesh = (String)i.getSerializableExtra("images");
         List<String> stringList = new ArrayList<>(Arrays.asList(seesh.split("Δ")));
 
-        CustomPagerAdapter mCustomPagerAdapter = new CustomPagerAdapter(this);
-
-        ViewPager mViewPager = (ViewPager) findViewById(R.id.ImageCar);
-        mViewPager.setAdapter(mCustomPagerAdapter);
+        SliderLayout sliderShow = (SliderLayout) findViewById(R.id.slider);
         LinearLayout LL_01 = findViewById(R.id.LL_01);
         for(int k = 0;k < stringList.size();k++){
             final ImageView iv = new ImageView(getApplicationContext());
@@ -97,9 +96,13 @@ public class Info_Imovel_1 extends AppCompatActivity {
             // Add layout parameters to ImageView
             iv.setLayoutParams(lp);
             Log.d("Log", stringList.get(k));
-            loadImageByInternetUrl(iv,stringList.get(k));
 
-            mCustomPagerAdapter.instantiateItem(mViewPager,k,iv);
+            TextSliderView textSliderView = new TextSliderView(this);
+            textSliderView
+                    .description("")
+                    .image(stringList.get(k));
+
+            sliderShow.addSlider(textSliderView);
         }
 
         //final int[] sampleImages = {R.drawable.image_1, R.drawable.image_2, R.drawable.image_3, R.drawable.image_4, R.drawable.image_5};
