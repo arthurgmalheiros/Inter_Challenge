@@ -42,7 +42,7 @@ public class Sim_Financiamento extends AppCompatActivity {
         final TextView jk = (TextView)findViewById(R.id.txt_Cred);
         final Button pf = (Button)findViewById(R.id.txt_ParcFinal);
         final TextView tp = (TextView)findViewById(R.id.txt_Parc);
-        jk.setText(skmax.getProgress() + "/" + valor.toString());
+        jk.setText("R$"+ skmax.getProgress() + "/R$ " +  valor.toString());
         final double ueu = ((valor.intValue() - skmax.getProgress()) /skparc.getProgress()) * 1.0075;
         if (skmax.getProgress() <= minCred)
             skmax.setProgress(minCred.intValue()); jk.setText(skmax.getProgress() + "/" + valor.toString());
@@ -92,10 +92,10 @@ public class Sim_Financiamento extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if (progress <= minCred)
-                    skmax.setProgress(minCred.intValue());
+                //if (progress <= minCred)
+                //    skmax.setProgress(minCred.intValue());
 
-                jk.setText(skmax.getProgress() + "/" + valor.toString());
+                jk.setText("R$"+ skmax.getProgress() + "/R$ " +  valor.toString());
                 final double uau =((valor.intValue() - skmax.getProgress()) /skparc.getProgress()) * 1.0075;;
 
 

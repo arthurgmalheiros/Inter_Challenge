@@ -62,6 +62,7 @@ public class Second_Screen extends AppCompatActivity {
             b.putString("garagem", parts[8]);
             b.putString("descricao", parts[9]);
             b.putString("nome", parts[10]);
+            b.putString("images",parts[11]);
             itn.putExtras(b);
             startActivity(itn);
             imv.Info(parts);
