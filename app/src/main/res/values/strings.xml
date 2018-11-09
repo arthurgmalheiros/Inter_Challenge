@@ -2,11 +2,20 @@
     <string name="app_name">DesafioBancoInter</string>
     <string name="tela_inicial">tela_inicial</string>
     <string name="emprestimoBtn">emprestimoBtn</string>
-    <string name="texto" id="texto"></string>
+    <string name="descricao" id="descricao"></string>
+    <string name="condominio" id="condominio"></string>
+    <string name="iptu" id="iptu"></string>
+    <string name="area" id="area"></string>
     <string name="NomeImovel">Financiando: </string>
     <string name="financie">FINANCIE!</string>
     <string name="imgteste">imagemTeste</string>
-    <string name="lblDescricao">Detalhes do imóvel</string>
+    <string name="lblDescricao">Descrição do imóvel</string>
+    <string name="lblCondominio">Condomínio</string>
+    <string name="lblIptu">IPTU</string>
+    <string name="lblArea">Área</string>
+    <string name="lblQuartos">quartos</string>
+    <string name="lblBanheiros">Banheiros</string>
+    <string name="lblGaragem">Garagem</string>
     <integer name="JurosMax">666</integer>
     <integer name="ParcelasMax">360</integer>
     <integer name="Credito">666</integer>

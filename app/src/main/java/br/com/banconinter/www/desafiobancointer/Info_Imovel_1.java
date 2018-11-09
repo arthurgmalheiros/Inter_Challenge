@@ -23,8 +23,12 @@ public class Info_Imovel_1 extends AppCompatActivity {
 
         final Intent i = getIntent();
 
-        final String descricao = (String) i.getSerializableExtra("descricao"); // getSerializableExtra pega as infomações de acordo com o nome
-        final String nome = (String) i.getSerializableExtra("nome"); // getSerializableExtra pega as infomações de acordo com o nome
+        // getSerializableExtra pega as infomações de acordo com o nome
+        final String nome = (String) i.getSerializableExtra("nome");
+        final String descricao = (String) i.getSerializableExtra("descricao");
+        final String condominio = (String) i.getSerializableExtra("condominio");
+        final String iptu = (String) i.getSerializableExtra("iptu");
+        final String area = (String) i.getSerializableExtra("area");
 
         Objects.requireNonNull(getSupportActionBar()).setTitle(nome); // for set actionbar title
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); // for add back arrow in action bar
@@ -32,9 +36,21 @@ public class Info_Imovel_1 extends AppCompatActivity {
         TextView txtDesc = (TextView)findViewById(R.id.Descricao);
         txtDesc.setText(descricao);
 
+        TextView txtCond = (TextView)findViewById(R.id.Condominio);
+        txtCond.setText(condominio);
+
+        TextView txtIptu = (TextView)findViewById(R.id.iptu);
+        txtCond.setText(iptu);
+
+        TextView txtArea = (TextView)findViewById(R.id.area);
+        txtCond.setText(area);
+
         ViewGroup.LayoutParams params = txtDesc.getLayoutParams();
         params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
         txtDesc.setLayoutParams(params);
+        txtCond.setLayoutParams(params);
+        txtIptu.setLayoutParams(params);
+        txtArea.setLayoutParams(params);
 
         final Button button = (Button) findViewById(R.id.btn_sim_fin);
         button.setOnClickListener(new View.OnClickListener() {
