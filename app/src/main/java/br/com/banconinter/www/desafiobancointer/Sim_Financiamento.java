@@ -2,12 +2,17 @@ package br.com.banconinter.www.desafiobancointer;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.text.DecimalFormat;
 public class Sim_Financiamento extends AppCompatActivity {
 
@@ -16,7 +21,7 @@ public class Sim_Financiamento extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sim__financiamento);
-        Intent i = getIntent();
+        final Intent i = getIntent();
 
         final Integer valor = (Integer)i.getSerializableExtra("valor");
 
@@ -27,10 +32,12 @@ public class Sim_Financiamento extends AppCompatActivity {
         skmax.setMax(maxCred.intValue());
 
         final TextView jk = (TextView)findViewById(R.id.txt_Cred);
-        final TextView pf = (TextView)findViewById(R.id.txt_ParcFinal);
+        final Button pf = (Button)findViewById(R.id.txt_ParcFinal);
         final TextView tp = (TextView)findViewById(R.id.txt_Parc);
         jk.setText(skmax.getProgress() + "/" + valor.toString());
         final double ueu = ((valor.intValue() - skmax.getProgress()) /skparc.getProgress()) * 1.0075;
+        if (skmax.getProgress() <= minCred)
+            skmax.setProgress(minCred.intValue()); jk.setText(skmax.getProgress() + "/" + valor.toString());
         final DecimalFormat format = new DecimalFormat("##.00");
         pf.setText("R$" + format.format(ueu) );
         skparc.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -38,6 +45,8 @@ public class Sim_Financiamento extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (progress <= 2)
+                    skparc.setProgress(2);
                 final double uau = ((valor.intValue() - skmax.getProgress()) /skparc.getProgress()) * 1.0075;;
                 tp.setText(Integer.toString(skparc.getProgress()));
                 pf.setText("R$" + format.format(uau));
@@ -51,7 +60,25 @@ public class Sim_Financiamento extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
+        pf.setOnClickListener( new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent j = new Intent(Intent.ACTION_SEND);
+                j.setType("message/rfc822");
+                j.putExtra(Intent.EXTRA_EMAIL  , new String[]{"bertod777@gmail.com"});
+                j.putExtra(Intent.EXTRA_SUBJECT, "Proposta de Négocios do imovel: " + (String)i.getSerializableExtra("nome"));
+                j.putExtra(Intent.EXTRA_TEXT   , "Olá vi seu anuncio com o InterPlace e montei minha proposta de financiamento. Aqui estão os detalhes..." +
+                        "Vou pagar " + skmax.getProgress() + " Parcelas de R$" + jk.getText() +
+                " Esse valor já é calculado com os juros do Financiamento Banco Inter.");
+                try {
+                    startActivity(Intent.createChooser(j, "Send mail..."));
+                } catch (android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(Sim_Financiamento.this  , "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         skmax.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @SuppressLint("SetTextI18n")
@@ -59,8 +86,10 @@ public class Sim_Financiamento extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (progress <= minCred)
                     skmax.setProgress(minCred.intValue());
+
                 jk.setText(skmax.getProgress() + "/" + valor.toString());
                 final double uau =((valor.intValue() - skmax.getProgress()) /skparc.getProgress()) * 1.0075;;
+
 
                 pf.setText("R$" + format.format(uau) );
             }
@@ -76,8 +105,6 @@ public class Sim_Financiamento extends AppCompatActivity {
 
 
 
-        TextView txt = (TextView)findViewById(R.id.Titulo);
-        txt.setText((String)i.getSerializableExtra("nome"));
 
     }
 }

@@ -55,7 +55,6 @@ public class Info_Imovel_1 extends AppCompatActivity {
         final Button button = (Button) findViewById(R.id.btn_sim_fin);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                finish();
                 Sim_Financiamento imv = new Sim_Financiamento();
                 Intent itn = new Intent(Info_Imovel_1.this, Sim_Financiamento.class);
                 Bundle b = i.getExtras();
