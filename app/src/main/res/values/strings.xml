@@ -5,6 +5,8 @@
     <string name="texto" id="texto"></string>
     <string name="NomeImovel">Financiando: </string>
     <string name="financie">FINANCIE!</string>
+    <string name="imgteste">imagemTeste</string>
+    <string name="lblDescricao">Detalhes do imóvel</string>
     <integer name="JurosMax">666</integer>
     <integer name="ParcelasMax">360</integer>
     <integer name="Credito">666</integer>

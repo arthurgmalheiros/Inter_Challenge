@@ -8,26 +8,25 @@
     tools:layout_editor_absoluteY="25dp">
 
     <TextView
-        android:id="@+id/TextoMain"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/Descricao"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="79dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="79dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="39dp"
         android:text="@string/texto"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/CinzaEscuroBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/lblDescricao" />
 
     <Button
         android:id="@+id/btn_sim_fin"
         android:layout_width="339dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginStart="9dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/rnd_button"
         android:fontFamily="sans-serif"
         android:text="@string/financie"
@@ -37,7 +36,35 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:typeface="sans"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="163dp"
+        android:contentDescription="@string/imgteste"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/detalhe" />
+
+    <TextView
+        android:id="@+id/lblDescricao"
+        android:layout_width="282dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/lblDescricao"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sim_fin" />
+
 </android.support.constraint.ConstraintLayout>

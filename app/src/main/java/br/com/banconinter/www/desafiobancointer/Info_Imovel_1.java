@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,17 +21,20 @@ public class Info_Imovel_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info__imovel_1);
 
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Detalhes do imóvel"); // for set actionbar title
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // for add back arrow in action bar
-
         final Intent i = getIntent();
 
-        final String key = (String) i.getSerializableExtra("cep"); // getSerializableExtra pega as infomações de acordo com o nome
+        final String descricao = (String) i.getSerializableExtra("descricao"); // getSerializableExtra pega as infomações de acordo com o nome
+        final String nome = (String) i.getSerializableExtra("nome"); // getSerializableExtra pega as infomações de acordo com o nome
 
-        TextView txt = (TextView)findViewById(R.id.TextoMain);
-        txt.setText("CEP:" + key);
+        Objects.requireNonNull(getSupportActionBar()).setTitle(nome); // for set actionbar title
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // for add back arrow in action bar
 
-        txt.setText(key);
+        TextView txtDesc = (TextView)findViewById(R.id.Descricao);
+        txtDesc.setText(descricao);
+
+        ViewGroup.LayoutParams params = txtDesc.getLayoutParams();
+        params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        txtDesc.setLayoutParams(params);
 
         final Button button = (Button) findViewById(R.id.btn_sim_fin);
         button.setOnClickListener(new View.OnClickListener() {
